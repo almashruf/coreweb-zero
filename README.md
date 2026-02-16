@@ -34,3 +34,30 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+// Rendering Strategies:
+
+static -
+export default function Home(){
+return <h1>Our Store<h1/>
+}
+
+//ssr edge
+
+export const runtime = "edge";
+export default function Home(){
+return <h1>Our Store<h1/>
+}
+
+//isr
+
+export const revalidate = 60;
+
+export default async function ProductDetail({
+params,
+}: {
+params: Promise<{id: string}>
+}) {
+    const {id} = await params;
+    return <h1>Product {id} </h1>
+}
