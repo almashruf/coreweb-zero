@@ -39,3 +39,10 @@ export default function Home() {
 // tsx
 
 // const inter = Inter({ subsets: ["latin"] }); 
+
+
+// heavy js initail load
+
+// "use-client" components that do heavy work
+// third party scripts loading synchronously
+

@@ -1,22 +1,21 @@
-const products = [
-  { id: 1, name: "Shirt", price: 20 },
-  { id: 2, name: "Pants", price: 40 },
-  { id: 3, name: "Shoes", price: 60 },
-];
-
+// This sends ZERO JavaScript to browser
+// app/products/page.tsx (server component by default)
 export default function Products() {
   return (
-    <main>
-      <h1>Products</h1>
-      <ul>
-        {products.map((p) => (
-          <li key={p.id}>
-            <a href={`/products/${p.id}`}>
-              {p.name} - ${p.price}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </main>
+    <ul>
+      <li>Shirt - \$20</li>
+      <li>Pants - \$40</li>
+    </ul>
   );
 }
+
+// This sends ZERO JavaScript to browser
+// app/products/page.tsx (server component by default)
+// export default function Products() {
+//   return (
+//     <ul>
+//       <li>Shirt - \$20</li>
+//       <li>Pants - \$40</li>
+//     </ul>
+//   );
+// }

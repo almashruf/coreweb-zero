@@ -1,3 +1,6 @@
+// app/products/[id]/page.tsx — SERVER (no JS shipped)
+import AddToCart from "./AddToCart";
+
 export default async function ProductDetail({
   params,
 }: {
@@ -9,7 +12,8 @@ export default async function ProductDetail({
     <main>
       <h1>Product {id}</h1>
       <p>Price: \$20</p>
-      <a href="/checkout">Buy Now</a>
+      {/* ONLY this tiny component ships JS */}
+      <AddToCart productId={id} />
     </main>
   );
 }
