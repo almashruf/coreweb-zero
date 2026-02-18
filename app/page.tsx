@@ -25,3 +25,17 @@ export default function Home() {
 
 // Use priority on LCP images
 // Use next/image (auto-optimizes format + size)
+
+// GOOD — dimensions set
+// <Image src="/hero.jpg" width={800} height={400} alt="Banner" />
+
+
+// GOOD — space reserved
+// <div className="min-h-[200px]">
+//   {isLoaded ? <DynamicContent /> : null}
+// </div>
+
+// Font Display Swap (next/font handles this)
+// tsx
+
+// const inter = Inter({ subsets: ["latin"] }); 
