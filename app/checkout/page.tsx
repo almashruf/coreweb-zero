@@ -1,8 +1,18 @@
+// app/checkout/page.tsx
+"use client";
+
+import { trackPurchase } from "../components/TrackPurchase";
+
 export default function Checkout() {
+  function handleBuy() {
+    trackPurchase("ORDER-123", 60);
+    alert("Purchased!");
+  }
+
   return (
     <main>
       <h1>Checkout</h1>
-      <p>Thank you for your purchase!</p>
+      <button onClick={handleBuy}>Complete Purchase</button>
     </main>
   );
 }

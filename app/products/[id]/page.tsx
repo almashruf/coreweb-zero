@@ -17,3 +17,15 @@ export default async function ProductDetail({
     </main>
   );
 }
+
+// Compress Images
+// tsx
+// // next/image auto-converts to WebP and resizes
+// <Image
+//   src="/hero.jpg"
+//   width={800}
+//   height={400}
+//   alt="Banner"
+//   quality={75}        // ← reduce quality
+//   sizes="(max-width: 768px) 100vw, 800px"  // ← responsive
+// />
